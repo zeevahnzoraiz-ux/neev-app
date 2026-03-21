@@ -44,9 +44,12 @@ function Landing() {
         Generate videos, images, voice, and marketing content — all in one place.
       </p>
 
-      <button className="bg-white text-black px-6 py-3 rounded-xl">
-        Start Free Trial
-      </button>
+      <button
+  onClick={() => window.location.href = "/signup"}
+  className="bg-white text-black px-6 py-3 rounded-xl"
+>
+  Start Free Trial
+</button>
 
       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
         <Card title="AI Video" desc="Create videos instantly from text" />
