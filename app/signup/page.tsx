@@ -23,7 +23,6 @@ export default function SignupPage() {
             placeholder="Password"
             className="w-full rounded-xl bg-black border border-zinc-700 px-4 py-3 outline-none"
           />
-
           <button
             type="submit"
             className="w-full bg-white text-black rounded-xl px-4 py-3 font-medium"
