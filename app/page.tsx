@@ -35,21 +35,28 @@ export default function Home() {
 
 function Landing() {
   return (
-    <div className="p-10">
-      <h1 className="text-5xl font-bold mb-6">
-        Neev — AI Creative Platform
-      </h1>
+  <div className="p-10">
 
-      <p className="text-gray-400 mb-6">
-        Generate videos, images, voice, and marketing content — all in one place.
-      </p>
+    {/* NAVBAR */}
+    <div className="flex justify-between items-center mb-10">
+      <h1 className="text-xl font-bold">Neev</h1>
 
-      <button
-  onClick={() => window.location.href = "/signup"}
-  className="bg-white text-black px-6 py-3 rounded-xl"
->
-  Start Free Trial
-</button>
+      <div className="flex gap-4">
+        <button
+          onClick={() => window.location.href = "/login"}
+          className="text-white"
+        >
+          Login
+        </button>
+
+        <button
+          onClick={() => window.location.href = "/signup"}
+          className="bg-white text-black px-4 py-2 rounded-lg"
+        >
+          Start Free Trial
+        </button>
+      </div>
+    </div>
 
       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
         <Card title="AI Video" desc="Create videos instantly from text" />
@@ -62,7 +69,34 @@ function Landing() {
 
 function Dashboard() {
   return (
-    <div className="p-10">
+  <div className="p-10">
+
+    {/* NAVBAR */}
+    <div className="flex justify-between items-center mb-10">
+      <h1 className="text-xl font-bold">Neev</h1>
+
+      <div className="flex gap-4">
+        <button
+          onClick={() => window.location.href = "/login"}
+          className="text-white"
+        >
+          Login
+        </button>
+<button
+  onClick={() => window.location.href = "/dashboard"}
+  className="text-white"
+>
+  Dashboard
+</button>
+
+        <button
+          onClick={() => window.location.href = "/signup"}
+          className="bg-white text-black px-4 py-2 rounded-lg"
+        >
+          Start Free Trial
+        </button>
+      </div>
+    </div>
       <h1 className="text-3xl font-bold mb-6">Dashboard</h1>
 
       <div className="grid md:grid-cols-3 gap-6">
