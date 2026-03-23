@@ -1,5 +1,7 @@
 "use client";
 
+import { UserButton, SignedIn, SignedOut } from "@clerk/nextjs";
+
 import { useState } from "react";
 
 export default function Home() {
@@ -75,27 +77,34 @@ function Dashboard() {
     <div className="flex justify-between items-center mb-10">
       <h1 className="text-xl font-bold">Neev</h1>
 
-      <div className="flex gap-4">
-        <button
-          onClick={() => window.location.href = "/login"}
-          className="text-white"
-        >
-          Login
-        </button>
-<button
-  onClick={() => window.location.href = "/dashboard"}
-  className="text-white"
->
-  Dashboard
-</button>
+      <div className="flex gap-4 items-center">
+  <SignedOut>
+    <button
+      onClick={() => window.location.href = "/login"}
+      className="text-white"
+    >
+      Login
+    </button>
 
-        <button
-          onClick={() => window.location.href = "/signup"}
-          className="bg-white text-black px-4 py-2 rounded-lg"
-        >
-          Start Free Trial
-        </button>
-      </div>
+    <button
+      onClick={() => window.location.href = "/signup"}
+      className="bg-white text-black px-4 py-2 rounded-lg"
+    >
+      Start Free Trial
+    </button>
+  </SignedOut>
+
+  <SignedIn>
+    <button
+      onClick={() => window.location.href = "/dashboard"}
+      className="text-white"
+    >
+      Dashboard
+    </button>
+
+    <UserButton afterSignOutUrl="/" />
+  </SignedIn>
+</div>
     </div>
       <h1 className="text-3xl font-bold mb-6">Dashboard</h1>
 
